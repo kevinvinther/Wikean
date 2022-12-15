@@ -1,38 +1,19 @@
-.App {
-  text-align: center;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:wght@700&display=swap");
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.mainhome {
+  background-image: url("https://particle.scitech.org.au/app/uploads/2022/07/GettyImages-160111226-666x400-c-center.jpg");
+  filter: blur(6px);
+  -webkit-filter: blur(6px);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+  margin-top: -10em;
+  margin-left: -20em;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  background-size: cover;
 }
