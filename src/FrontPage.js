@@ -5,6 +5,11 @@ export default function FrontPage() {
     return (
         <div className="flex justify-between">
             <div className="w-[50%] pt-[1em] px-[4em]">
+                <NavLink to="/graphview">
+                    <h1 className="font-bold text-2xl text-blue-400  font-articleTitle">
+                        Graph View
+                    </h1>
+                </NavLink>
                 <h1 className="font-bold text-4xl  font-articleTitle">
                     Latest Read Articles
                 </h1>

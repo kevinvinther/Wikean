@@ -1,0 +1,268 @@
+import React from "react"
+import ReactDOM from "react-dom"
+import Graph from "react-graph-vis"
+import { NavLink } from "react-router-dom"
+
+export default function GraphView() {
+  const graph = {
+    nodes: [
+      { id: 1, label: "Algebra", title: "Algebra" },
+      { id: 2, label: "Geometry", title: "Geometry" },
+      { id: 3, label: "Trigonometry", title: "Trigonometry" },
+      { id: 4, label: "Calculus", title: "Calculus" },
+      {
+        id: 5,
+        label: "Differential Equations",
+        title: "Differential Equations",
+      },
+      { id: 6, label: "Linear Algebra", title: "Linear Algebra" },
+      { id: 7, label: "Abstract Algebra", title: "Abstract Algebra" },
+      { id: 8, label: "Number Theory", title: "Number Theory" },
+      { id: 9, label: "Combinatorics", title: "Combinatorics" },
+      { id: 10, label: "Graph Theory", title: "Graph Theory" },
+      { id: 11, label: "Probability", title: "Probability" },
+      { id: 12, label: "Statistics", title: "Statistics" },
+      { id: 13, label: "Game Theory", title: "Game Theory" },
+      { id: 14, label: "Topology", title: "Topology" },
+      { id: 15, label: "Real Analysis", title: "Real Analysis" },
+      { id: 16, label: "Complex Analysis", title: "Complex Analysis" },
+      { id: 17, label: "Functional Analysis", title: "Functional Analysis" },
+      {
+        id: 18,
+        label: "Differential Geometry",
+        title: "Differential Geometry",
+      },
+      {
+        id: 19,
+        label: "Combinatorial Game Theory",
+        title: "Combinatorial Game Theory",
+      },
+      { id: 21, label: "Logic", title: "Logic" },
+      { id: 22, label: "Model Theory", title: "Model Theory" },
+      {
+        id: 23,
+        label: "Combinatorial Game Theory",
+        title: "Combinatorial Game Theory",
+      },
+      { id: 24, label: "Number Systems", title: "Number Systems" },
+      { id: 25, label: "Number Theory", title: "Number Theory" },
+      { id: 26, label: "Combinatorics", title: "Combinatorics" },
+      { id: 27, label: "Graph Theory", title: "Graph Theory" },
+      { id: 28, label: "Algorithms", title: "Algorithms" },
+      {
+        id: 29,
+        label: "Computational Complexity",
+        title: "Computational Complexity",
+      },
+      { id: 30, label: "Computer Science", title: "Computer Science" },
+      { id: 31, label: "Dynamical Systems", title: "Dynamical Systems" },
+      { id: 32, label: "Chaos Theory", title: "Chaos Theory" },
+      { id: 33, label: "Fractal Geometry", title: "Fractal Geometry" },
+      {
+        id: 34,
+        label: "Combinatorial Topology",
+        title: "Combinatorial Topology",
+      },
+      { id: 35, label: "Category Theory", title: "Category Theory" },
+      { id: 36, label: "Lie Theory", title: "Lie Theory" },
+      {
+        id: 37,
+        label: "Representation Theory",
+        title: "Representation Theory",
+      },
+      { id: 38, label: "Group Theory", title: "Group Theory" },
+      { id: 39, label: "Ring Theory", title: "Ring Theory" },
+      { id: 40, label: "Field Theory", title: "Field Theory" },
+      { id: 41, label: "Tensor Analysis", title: "Tensor Analysis" },
+      { id: 42, label: "Manifold Theory", title: "Manifold Theory" },
+      { id: 43, label: "Lie Groups", title: "Lie Groups" },
+      { id: 44, label: "Riemannian Geometry", title: "Riemannian Geometry" },
+      { id: 45, label: "Algebraic Geometry", title: "Algebraic Geometry" },
+      { id: 46, label: "Differential Forms", title: "Differential Forms" },
+      { id: 47, label: "Homology Theory", title: "Homology Theory" },
+      { id: 48, label: "Cohomology Theory", title: "Cohomology Theory" },
+      { id: 49, label: "K-Theory", title: "K-Theory" },
+      { id: 50, label: "Category Theory", title: "Category Theory" },
+      {
+        id: 51,
+        label: "Boolean Algebra",
+        title: "<a href='http://example.com'>Link to example</a>",
+      },
+      { id: 52, label: "Boolean Functions", title: "Boolean Functions" },
+      {
+        id: 53,
+        label: "Boolean Circuit Design",
+        title: "Boolean Circuit Design",
+      },
+      { id: 54, label: "Discrete Mathematics", title: "Discrete Mathematics" },
+      {
+        id: 55,
+        label: "Combinatorial Designs",
+        title: "Combinatorial Designs",
+      },
+      { id: 56, label: "Finite Fields", title: "Finite Fields" },
+      { id: 57, label: "Finite Geometry", title: "Finite Geometry" },
+      { id: 58, label: "Coding Theory", title: "Coding Theory" },
+      { id: 59, label: "Cryptography", title: "Cryptography" },
+      {
+        id: 60,
+        label: "Error-Correcting Codes",
+        title: "Error-Correcting Codes",
+      },
+    ],
+    edges: [
+      { from: 1, to: 6 },
+      { from: 2, to: 3 },
+      { from: 3, to: 4 },
+      { from: 4, to: 5 },
+      { from: 6, to: 7 },
+      { from: 7, to: 8 },
+      { from: 8, to: 9 },
+      { from: 9, to: 10 },
+      { from: 1, to: 11 },
+      { from: 1, to: 12 },
+      { from: 1, to: 13 },
+      { from: 2, to: 14 },
+      { from: 4, to: 15 },
+      { from: 4, to: 16 },
+      { from: 5, to: 17 },
+      { from: 6, to: 18 },
+      { from: 13, to: 19 },
+      { from: 20, to: 14 },
+      { from: 21, to: 22 },
+      { from: 21, to: 23 },
+      { from: 24, to: 25 },
+      { from: 25, to: 26 },
+      { from: 26, to: 27 },
+      { from: 28, to: 29 },
+      { from: 29, to: 30 },
+      { from: 4, to: 31 },
+      { from: 31, to: 32 },
+      { from: 32, to: 33 },
+      { from: 14, to: 34 },
+      { from: 7, to: 35 },
+      { from: 35, to: 36 },
+      { from: 36, to: 37 },
+      { from: 37, to: 38 },
+      { from: 7, to: 39 },
+      { from: 39, to: 40 },
+      { from: 6, to: 41 },
+      { from: 41, to: 42 },
+      { from: 42, to: 43 },
+      { from: 43, to: 44 },
+      { from: 7, to: 45 },
+      { from: 4, to: 46 },
+      { from: 46, to: 47 },
+      { from: 47, to: 48 },
+      { from: 48, to: 49 },
+      { from: 49, to: 50 },
+      { from: 1, to: 51 },
+      { from: 51, to: 52 },
+      { from: 52, to: 53 },
+      { from: 53, to: 30 },
+      { from: 10, to: 54 },
+      { from: 9, to: 55 },
+      { from: 54, to: 56 },
+      { from: 54, to: 57 },
+      { from: 54, to: 58 },
+      { from: 54, to: 59 },
+      { from: 54, to: 60 },
+      { from: 1, to: 59 },
+      { from: 1, to: 60 },
+      { from: 8, to: 58 },
+      { from: 8, to: 59 },
+      { from: 8, to: 60 },
+      { from: 11, to: 12 },
+      { from: 12, to: 13 },
+      { from: 13, to: 19 },
+      { from: 14, to: 15 },
+      { from: 14, to: 16 },
+      { from: 14, to: 18 },
+      { from: 15, to: 16 },
+      { from: 15, to: 17 },
+      { from: 16, to: 17 },
+      { from: 16, to: 18 },
+      { from: 17, to: 18 },
+      { from: 21, to: 23 },
+      { from: 23, to: 24 },
+      { from: 24, to: 25 },
+      { from: 25, to: 26 },
+      { from: 26, to: 27 },
+      { from: 27, to: 28 },
+      { from: 28, to: 29 },
+      { from: 29, to: 30 },
+      { from: 31, to: 32 },
+      { from: 32, to: 33 },
+      { from: 33, to: 14 },
+      { from: 34, to: 14 },
+      { from: 35, to: 36 },
+      { from: 36, to: 37 },
+      { from: 37, to: 38 },
+      { from: 38, to: 7 },
+      { from: 39, to: 40 },
+      { from: 40, to: 7 },
+      { from: 41, to: 42 },
+      { from: 42, to: 43 },
+      { from: 43, to: 44 },
+      { from: 44, to: 6 },
+      { from: 45, to: 7 },
+      { from: 46, to: 47 },
+      { from: 47, to: 48 },
+      { from: 48, to: 49 },
+      { from: 49, to: 50 },
+      { from: 51, to: 52 },
+      { from: 52, to: 53 },
+      { from: 53, to: 30 },
+      { from: 54, to: 55 },
+      { from: 54, to: 56 },
+      { from: 54, to: 57 },
+      { from: 54, to: 58 },
+      { from: 54, to: 59 },
+      { from: 54, to: 60 },
+    ],
+  }
+
+  const options = {
+    layout: {
+      hierarchical: true,
+    },
+    nodes: {
+      shadow: true,
+      font: {
+        multi: "html",
+      },
+    },
+    edges: {
+      color: "#000000",
+      shadow: true,
+    },
+    height: "1000px",
+    interaction: { hover: true },
+    manipulation: { enabled: false },
+    physics: { enabled: true },
+  }
+
+  const events = {
+    select: function(event) {
+      var { nodes, edges } = event
+    },
+  }
+  return (
+    <div className="flex">
+      <Graph
+        graph={graph}
+        options={options}
+        events={events}
+        onClick={(event) => {
+          return <NavLink to="/booleanalgebra">Boolean Algebra</NavLink>
+        }}
+        getNetwork={(network) => {
+          //  if you want access to vis.js network api you can set the state in a parent component using this property
+        }}
+      />
+      <NavLink to="/booleanalgebra">
+        <p className="text-blue-400">Boolean Algebra</p>
+      </NavLink>
+    </div>
+  )
+}
